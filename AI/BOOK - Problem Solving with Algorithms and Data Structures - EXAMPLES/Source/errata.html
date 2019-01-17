@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>Problem Solving with Algorithms and Data Structures Eratta</title>
+</head>
+<body>
+    <h1>Errata for Problem Solving with Algorithms and Data Structures using Python</h1>
+<h2>Chapter 1 - Introduction</h2>    
+<h2>Chapter 2 - Stacks and Queues</h2>    
+<h2>Chapter 3 - Recursion</h2>    
+<h2>Chapter 4 - Analysis, Sorting, and Searching</h2>    
+<h2>Chapter 5 - Trees</h2>    
+<h2>Chapter 6 - Graphs</h2>    
+<h3>Listing 6.9</h3>
+<p>Although the dfs algorithm in the  text works fine, the following recursive version of DFS is more appropriate for use with the topological sort.</p>
+<pre><tt>00001: <span style="color: #9A1900"># DFS implementation using adjGraph where nodes contain an adj list reference to other nodes</span>
+00002: 
+00003: time = <span style="color: #CC33CC">0</span>
+00004: 
+00005: <span style="color: #0000FF">def</span> <span style="color: #000000">dfs</span>(theGraph):
+00006:     <span style="color: #0000FF">for</span> u <span style="color: #0000FF">in</span> theGraph:
+00007:         u.<span style="color: #000000">setColor</span>(<span style="color: #FF0000">'white'</span>)
+00008:         u.<span style="color: #000000">setPred</span>(-<span style="color: #CC33CC">1</span>)
+00009:     time = <span style="color: #CC33CC">0</span>
+00010:     <span style="color: #0000FF">for</span> u <span style="color: #0000FF">in</span> theGraph:
+00011:         <span style="color: #0000FF">if</span> u.<span style="color: #000000">getColor</span>() == <span style="color: #FF0000">'white'</span>:
+00012:             <span style="color: #000000">dfsiter</span>(u)
+00013: 
+00014: <span style="color: #0000FF">def</span> <span style="color: #000000">dfsvisit</span>(u):
+00015:     <span style="color: #0000FF">global</span> time
+00016:     u.<span style="color: #000000">setColor</span>(<span style="color: #FF0000">'gray'</span>)
+00017:     time = time+<span style="color: #CC33CC">1</span>
+00018:     u.<span style="color: #000000">setDiscovery</span>(time)
+00019:     <span style="color: #0000FF">for</span> v <span style="color: #0000FF">in</span> u.<span style="color: #000000">getAdj</span>():
+00020:         <span style="color: #0000FF">if</span> v.<span style="color: #000000">getColor</span>() == <span style="color: #FF0000">'white'</span>:
+00021:             v.<span style="color: #000000">setPred</span>(u)
+00022:             <span style="color: #000000">dfsvisit</span>(v)
+00023:     u.<span style="color: #000000">setColor</span>(<span style="color: #FF0000">'black'</span>)
+00024:     time = time + <span style="color: #CC33CC">1</span>
+00025:     u.<span style="color: #000000">setFinish</span>(time)
+00026: 
+</tt></pre>
+<p>Page 264, Step 2 in Topological sort:  Order the list of vertices in decreasing order of finish time</p>
+<h3>Listing 6.11</h3>
+<p>The version of Prim's algorithm in listing 6.11 contains typos</p>
+<pre><tt>00001: <span style="color: #0000FF">def</span> <span style="color: #000000">prim</span>(G,w,start):
+00002:     PQ = <span style="color: #000000">PriorityQueue</span>()
+00003:     <span style="color: #0000FF">for</span> v <span style="color: #0000FF">in</span> G:
+00004:         v.<span style="color: #000000">setDistance</span>(sys.maxint)
+00005:         v.<span style="color: #000000">setPred</span>(None)
+00006:     start.<span style="color: #000000">setDistance</span>(<span style="color: #CC33CC">0</span>)
+00007:     PQ.<span style="color: #000000">buildHeap</span>([(v.<span style="color: #000000">getDistance</span>(),v) <span style="color: #0000FF">for</span> v <span style="color: #0000FF">in</span> G])
+00008:     <span style="color: #0000FF">while</span> <span style="color: #0000FF">not</span> PQ.<span style="color: #000000">isEmpty</span>():
+00009:         u = PQ.<span style="color: #000000">delMin</span>()
+00010:         <span style="color: #0000FF">for</span> v <span style="color: #0000FF">in</span> u.<span style="color: #000000">getAdj</span>():
+00011:             <span style="color: #0000FF">if</span> v <span style="color: #0000FF">in</span> PQ <span style="color: #0000FF">and</span> u.<span style="color: #000000">getCost</span>(v) &lt; v.<span style="color: #000000">getDistance</span>():
+00012:                 <span style="color: #0000FF">if</span> v.<span style="color: #000000">getPred</span>() != None:
+00013:                     G.<span style="color: #000000">findEdge</span>(v,v.<span style="color: #000000">getPred</span>()).<span style="color: #000000">remove</span>()
+00014:                 v.<span style="color: #000000">setPred</span>(u)
+00015:                 v.<span style="color: #000000">setDistance</span>(u.<span style="color: #000000">getCost</span>(v))
+00016:                 PQ.<span style="color: #000000">decreaseKey</span>(v,u.<span style="color: #000000">getCost</span>(v))</tt></pre>
+
+<h2>Chapter 7</h2>    
+</body>
+</html>

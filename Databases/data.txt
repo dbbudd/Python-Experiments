@@ -1,0 +1,17 @@
+ABC123 | Audi | R8
+DEF444 | Mercedes | SLS
+XYZ000 | Bentley | GT Continental
+
+
+
+Database skillsConstructs a fully operational relational database consisting of 2-3 tables with 1:M relationships, standard and sort queries, including Boolean operators and queries requiring joined tables. Constructs Entity Relationship Diagrams including relationships, cardinality, primary and foreign keys and appropriate attributes; describes normalisation to Third Normal Form.
+
+Database skillsConstructs a workable relational database consisting of 2-3 tables with 1:M relationships, standard and sort queries, including Boolean operators and queries requiring joined tables. Constructs Entity Relationship Diagrams including relationships, cardinality, primary and foreign keys and appropriate attributes, although some elements are incomplete or missing; describes some aspects of normalisation.
+
+
+
+
+Programming skillsAccurately represents modular algorithms using pseudocode and flowcharts. Algorithms and programs demonstrate a sound understanding of the sequence, selection and iteration constructs, including nested loops and/or multi-way decisions. Checks algorithm logic using trace 
+tables.
+
+Programming skillsRepresents sequence, selection and repetition constructs using pseudocode and flowcharts. Algorithms and programs demonstrate a sound understanding of the sequence, selection and iteration constructs. Trace tables include most variables and accurately trace non-nested control structures.

@@ -1,0 +1,4 @@
+Cardid, Name, Color, Power, Toughness, Type, SubType
+1,alpha card,2,1,1,1,Test 1
+2,Beta card,2,1,1,1,Test 1
+3,Delta card,3,1,1,2,Test 2

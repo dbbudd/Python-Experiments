@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <html>
+	<head>
+	    <title>Football Test Database</title>
+		<style>
+			.query_form {
+				border: solid red 3px;
+				margin: 5px;
+				width: 500px;
+				padding: 5px;
+			}
+			h3 {
+				padding-top: 0;
+				margin-top: 0;
+				margin-bottom: 5px;
+			}
+		</style>
+	</head>
+	<body>
+	    <h1>Test Football Database</h1>
+	    <ul>
+			<li><a href="Create_Football_DB.py">Create New Database</a></li>
+			<li><a href="Insert_Data.py">Insert Test Database</a></li>
+			<li><a href="Select_Top50.py">Get first 50 records in each table</a></li>
+			<li><a href="more_queries.py">Some more random queries</a></li>
+	    </ul>
+		<div class="query_form">
+			<h3>Players from a suburb</h3>
+			<form action="Select_suburb.py">
+				Find the players from a particular suburb.<br />
+				Enter the suburb: <input type="text" name="suburb" /><br />
+				<input type="submit">
+			</form>
+		</div>
+		
+		<div class="query_form">
+			<h3>Player statistics</h3>
+			<form action="Select_PlayerSeason.py">
+				Find the season statistics for a player.<br />
+				Enter the registration number: <input type="number" name="registration" /><br />
+				<input type="submit">
+			</form>
+		</div>
+		
+		<div class="query_form">
+			<h3>Players Starting With ...</h3>
+			<form action="Select_StartWith.py">
+				Find all players whose last name starts with the following letters:<br />
+				Enter the letters: <input type="text" name="starts_with" /><br />
+				<input type="submit">
+			</form>
+		</div>
+	</body>
+    </html>

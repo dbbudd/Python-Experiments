@@ -1,0 +1,6 @@
+E001 | Clarke | Accounting | ABC123
+E002 | Kent | IT Support | DEF444
+E003 | Mann | Sales | DEF444
+E004 | Lane | IT Support | XYZ000
+E005 | Lois | Sales | XYZ000
+E006 | Olsen | Accounting | XYZ000

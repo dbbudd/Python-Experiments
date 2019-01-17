@@ -1,0 +1,3 @@
+ABC123 | Audi | 52642
+DEF444 | Mercedes | 57127
+XYZ000 | Bentley | 350000
